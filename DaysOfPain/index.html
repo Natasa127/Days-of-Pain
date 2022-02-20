@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DaysOfPain | My NEK My BAK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div id="top-bar"></div>
+
+    <div id="background">
+      <div id="dialog" class="text-center">
+        <span id="instructions">
+          <p id="instructionsTitle">Welcome to Days of Pain!</p>
+          This simulator will simulate the student experience while at university... <br>
+
+          Just kidding, just kidding! University life is much, much more complicated than this. <br>This is a simplified version focused on balancing a few chosen key aspects. <br> <br>
+
+          Let's show you the rules :) <br>
+        </span>
+        <br><br>
+        <button onclick="showNextInstructions()" class="nextButtons"> Next </button>
+      </div>
+    </div>
+
+    <br><br>
+    
+    <div id="introDiv">
+      <p id="welcomeTitle"> Welcome! </p>
+      <p style="font-size: 25px;"> Let's start the day... </p>
+    </div>
+
+    <div id="navBar">
+      <table id="choiceTable">
+        <tr>
+          <td class="choiceTD">
+             <button class="choiceButtons" onclick="openGoToClass()">Go To Class</button>
+          </td>
+          <td class="choiceTD">
+            <button class="choiceButtons" onclick="openRelax()">Relax</button>
+       
+          </td>
+          <td class="choiceTD">
+          <button class="choiceButtons" onclick="openEat()">Eat</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <img class="blobChoicePics" id="blobClass" style="width:60%;height:60%;" src="blob class.png">
+          </td>
+          <td>
+              <img class="blobChoicePics" id="blobClass" style="width:40%;height:40%;" src="relaxed blob.png">
+          </td>
+          <td>
+              <img style="width:40%;height:40%;" class="blobChoicePics" id="blobClass" src="blob eat.png">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="status"> <!-- Colour coordinate green = good, yellow = bad, red = needs attention -->
+      <h3>Hunger:</h3>
+      <div class="progress">
+        <div id="hunger" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+      <span id="hungerPercent">0%</span>
+        </div>
+      </div>
+      <h3>Grades:</h3>
+      <div class="progress">
+        <div id="grades" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+      <span id="gradesPercent">0%</span>
+        </div>
+      </div>
+      <h3>Happiness:</h3>
+      <div class="progress">
+        <div id="happiness" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+      <span id="happinessPercent">100%</span>
+        </div>
+      </div>
+      <div id="clock">
+        <br>
+      <h2>Time: <span id="time">9:00 AM</span></h2>
+    </div>
+    </div>
+    
+    <div id="goToClass">
+      <p class="sectHead" id="goToClassTitle">CLASS</p>
+      <p styl="font-size: 20px;">Which class are you going to?</p>
+      <table id="classTable">
+        <tr id="classTR">
+          <td class="classTD">
+          <button class="classButt" onclick="showCalcCourse()">Calculus</button>
+          </td>
+          <td class="classTD">
+          <button class="classButt" onclick="showCsCourse()">Computer Science</button>
+          </td>
+          <td class="classTD">
+          <button class="classButt" onclick="showBioCourse()">Biology</button>
+          </td>
+         <td class="classTD">
+          <button class="classButt" onclick="showPsychCourse()">Psychology</button>
+          </td>
+         <td class="classTD">
+          <button class="classButt" onclick="showEconCourse()">Economics</button>
+          </td>
+        </tr>
+      </table>    
+    </div>
+
+    <div id="status2"> <!-- Colour coordinate green = good, yellow = bad, red = needs attention -->
+      <h3 style="color: white">Mood:</h3>
+      <div id="blobDiv">
+        <!--Basics-->
+        <img class="blobs" id="blobIMG"></div>
+      </div>
+    </div>
+    
+    <div id="goToClass">
+      <p class="sectHead" id="goToClassTitle">CLASS</p>
+      <p styl="font-size: 20px;">Which class are you going to?</p>
+      <table id="classTable">
+        <tr id="classTR">
+          <td class="classTD">
+          <button class="classButt" onclick="showCalcCourse()">Calculus</button>
+          </td>
+          <td class="classTD">
+          <button class="classButt" onclick="showCsCourse()">Computer Science</button>
+          </td>
+          <td class="classTD">
+          <button class="classButt" onclick="showBioCourse()">Biology</button>
+          </td>
+         <td class="classTD">
+          <button class="classButt" onclick="showPsychCourse()">Psychology</button>
+          </td>
+         <td class="classTD">
+          <button class="classButt" onclick="showEconCourse()">Economics</button>
+          </td>
+        </tr>
+      </table>    
+
+      <br><br><br>
+    </div>
+
+    <div class="classCourses" id="calcCourse">
+      <p class="courseHead" id="goToClassTitle">CALCULUS</p>
+      <div class="classQuestions">
+        <div class="classQuestions2">
+          <p>What is the derivative of x^-2</p>
+        <div class="classContent">
+          <input type="radio" id="CalcOp1" name="CalcQ1" value="CalcOp1">
+          <label for="html">-2x^-2 + C</label><br>
+          <input type="radio" id="CalcOp2" name="CalcQ1" value="CalcOp2">
+          <label for="css">-2x^-3</label><br>
+          <input type="radio" id="CalcOp3" name="CalcQ1" value="CalcOp3">
+          <label for="javascript">2x^-3 - 6x</label><br>
+          <br><br>
+          <button class="submitCourseButt" onClick="checkCalc()"> Submit </button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="classCourses" id="csCourse">
+      <p class="courseHead" id="goToClassTitle">Computer Science</p>
+      <div class="classQuestions">
+        <div class="classQuestions2">
+          <p>What is an accepted variable name in Python?</p>
+          <input type="radio" id="CsOp1" name="CsQ1" value="CsOp1">
+          <label for="html">var</label><br>
+          <input type="radio" id="CsOp2" name="CsQ1" value="CsOp2">
+          <label for="css">vA9 8</label><br>
+          <input type="radio" id="CsOp3" name="CsQ1" value="CsOp3">
+          <label for="javascript">9Var</label><br>
+          <br><br>
+          <button class="submitCourseButt" onClick="checkCS()"> Submit </button>
+        </div>
+      </div>
+    </div>
+
+   <div class="classCourses" id="bioCourse">
+      <p class="courseHead" id="goToClassTitle">Biology</p>
+      <div class="classQuestions">
+        <div class="classQuestions2">
+          <p>Mitochondria </p>
+          <input type="radio" id="BioOp1" name="BioQ1" value="BioOp1">
+          <label for="html">do absolutely nothing</label><br>
+          <input type="radio" id="BioOp2" name="BioQ1" value="BioOp2">
+          <label for="css">help turn the energy we take from food into energy that the cell can use</label><br>
+          <input type="radio" id="BioOp3" name="BioQ1" value="BioOp3">
+          <label for="javascript">transport oxygen from your lungs to your body's tissues</label><br>
+          <br><br>
+          <button class="submitCourseButt" onClick="checkBio()"> Submit </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="classCourses" id="psychCourse">
+      <p class="courseHead" id="goToClassTitle">Psychology</p>
+      <div class="classQuestions">
+        <div class="classQuestions2">
+          <p>Freud stated that dreams have both latent content and manifest content. <br>Latent content refers to</p>
+          <input type="radio" id="PsychOp1" name="PsychQ1" value="PsychOp1">
+          <label for="html">the symbolic meaning of a dream</label><br>
+          <input type="radio" id="PsychOp2" name="PsychQ1" value="PsychOp2">
+          <label for="css">the literal content of a dream</label><br>
+          <input type="radio" id="PsychOp3" name="PsychQ1" value="PsychOp3">
+          <label for="javascript">the cow in your dream</label><br>
+          <br><br>
+          <button class="submitCourseButt" onClick="checkPsych()"> Submit </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="classCourses" id="econCourse">
+      <p class="courseHead" id="goToClassTitle">Economics</p>
+      <div class="classQuestions">
+        <div class="classQuestions2">
+          <p>Supply is</p>
+          <input type="radio" id="EconOp1" name="EconQ1" value="EconOp1">
+          <label for="html">the total amount of a specific good or service that is available to consumers</label><br>
+          <input type="radio" id="EconOp2" name="EconQ1" value="EconOp2">
+          <label for="css">the consumer's desire to purchase goods and services and willingness to pay a price for a specific good or service</label><br>
+          <input type="radio" id="EconOp3" name="EconQ1" value="EconOp3">
+          <label for="javascript">the cow in your friend's dream</label><br>
+          <br><br>
+          <button class="submitCourseButt" onClick="checkEcon()"> Submit </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="relax" style="margin-bottom: 10%;">
+      <p class="sectHead" id="relaxTitle"> RELAX </p>
+      <table id="relaxTable">
+        <tr>
+          <td class="relaxTD">
+      <button class="relaxButt" onclick="openMovieList()">Watch a movie</button>
+          </td>
+          <td class="relaxTD">
+      <button class="relaxButt" onclick="openFriends()">Hang out with friends</button>
+          </td>
+          <td class="relaxTD">
+      <button class="relaxButt" onclick="openMusic()">Music</button>
+          </td>
+        </tr>
+      </table>
+
+      <div id="getMovies"></div>
+      <div id="getFriends">
+        <p style="font-size: 18px;">Watch this video for tips on how to make friends!</p>
+        <iframe width="699" height="393" src="https://www.youtube.com/embed/Mwc4ePLjkQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div id="getMusic">
+        <p style="font-size: 18px;">Here's a playlist of relaxing music to listen to!</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4GgKY4lnM2m1xHr38w1LRv?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>    
+      </div>
+    </div>
+
+    <div id="eat" style="margin-bottom: 10%;">
+      <p class="sectHead" id="eatTitle"> EAT </p>
+      <p style="text-align:center;">Choose a dish to eat! Each dish decreases your hunger by a certain amount, but its difficulty is higher!<br> <b><u>Scroll down after you click an option.</b></u></p>
+      <div class="grid-container">
+        <div class="grid-item">
+          <button class="foodButton" onclick="openFruit()" style="background-image: url('fruit.jpg')">Fruit</button>
+          <p>Hunger: -25</p>
+        </div>
+        <div class="grid-item border-0">
+          <button class="foodButton" onclick="openPizza()" style="background-image: url('pizza.jpg')">Pizza</button>
+          <p>Hunger: -15</p>
+        </div>
+        <div class="grid-item border-0">
+          <button class="foodButton" onclick="openCookies()" style="background-image: url('cookies.jpg')">Cookies</button>
+          <p>Hunger: -5</p>
+        </div>
+      </div>
+
+    <br></br>
+     <p style="text-align:center;">Once you press the button, a series of numbers will appear. Type them in the specific order they appear to win the game.</p>
+      <!-- Memory Game for Fruit -->
+      <div id="memoryGameFruit">
+        <button class="memoryButton" onclick="memory(500,'getMemory1')">Play Memory Game</button> <br><br>
+        <div>
+          <div id="getMemory1"></div>
+          <div>
+            <p><input type="text" placeholder="Type your guess..." id="myInput1"><br><br>
+            <button class="memoryButtonSubmit" type="button" onclick="getInput(25,'getMemory1','myInput1')">Submit</button>
+            </p>
+          </div>
+        </div>
+        <br></br>
+      </div>
+      <!-- Memory Game for Pizza -->
+      <div id="memoryGamePizza">
+        <button class="memoryButton" onclick="memory(1000,'getMemory2')">Play Memory Game</button> <br><br>
+        <div>
+          <div id="getMemory2"></div>
+          <div>
+            <p><input type="text" placeholder="Type your guess..." id="myInput2"><br><br>
+            <button class="memoryButtonSubmit" type="button" onclick="getInput(15,'getMemory2','myInput2')">Submit</button>
+            </p>
+          </div>
+        </div>
+        <br></br>
+      </div>
+      <!-- Memory Game for Cookies -->
+      <div id="memoryGameCookies">
+        <button class="memoryButton" onclick="memory(2000,'getMemory3')">Play Memory Game</button> <br><br>
+        <div>
+          <div id="getMemory3"></div>
+          <div>
+            <p><input type="text" placeholder="Type your guess..." id="myInput3"> <br><br>
+            <button class="memoryButtonSubmit" type="button" onclick="getInput(5,'getMemory3','myInput3')">Submit</button>
+            </p>
+          </div>
+        </div>
+        <br></br>
+      </div>
+    </div>
+
+    <div id="bottom-bar">
+      <h3 style="color: white; margin-left:1%;">Score: <span id="score">0</span></h3>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

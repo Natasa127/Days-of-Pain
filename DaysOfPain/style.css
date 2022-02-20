@@ -1,0 +1,397 @@
+body {
+  //margin: 3%;
+  font-family: 'Roboto Condensed';
+  //height: 100%;
+}
+
+#instructions2 {
+  display: none;
+}
+
+#instructionsTitle {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+#rulesDiv {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#rulesButt, #aboutButt {
+  text-align: center;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #316CF4;
+  color: white;
+}
+
+#rulesButt:hover, #aboutButt:hover {
+  background: #6667AB;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.nextButtons {
+  text-align: center;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #6667AB;
+  color: white;
+}
+
+.nextButtons:hover {
+  background: #42456E;
+  transform: translateY(-2px) scale(1.01);
+}
+
+#top-bar {
+  height: 15px;
+  background-color: rgba(102, 103, 171);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-bottom:5%;
+}
+
+#bottom-bar {
+  height: 30px;
+  background-color: rgba(102, 103, 171);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 5%;
+}
+
+#background {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#dialog {
+  background-color: white;
+  height: 50%;
+  width: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#instructions {
+  width: 90%;
+  text-align: center;
+  padding-top: 5%;
+  padding-left: 3%;
+}
+
+
+.nextButtons {
+  margin: auto;
+}
+
+#introDiv {
+  text-align: center;
+  margin-top: 3%;
+}
+
+#welcomeTitle {
+  font-size: 90px;
+  font-weight: bolder;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {color:#42456E;}
+  33%  {color:rgba(102, 103, 171); }
+  66% {color:#0080ff; }
+  100% {color:#42456E;}
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+#choiceTable {
+  width: 90% ;
+  margin-left: auto;
+  margin-right: auto;  
+  border-collapse: collapse ;
+  margin-bottom: 3%;
+}
+
+.choiceTD {
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+}
+
+.choiceButtons {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #316CF4;
+  color: white;
+}
+
+.choiceButtons:hover {
+  background: #6667AB;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.blobChoicePics {
+  width:50%;
+  height:50%;
+}
+
+#goToClass, #relax, #eat {
+  display: none;
+}
+
+#goToClass {
+  display: none;
+  margin-bottom: 10%;
+}
+
+.sectHead {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bolder;
+}
+
+#status {
+  width: 25%;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(102, 103, 171);
+  padding: 1%;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 5px solid rgba(102, 103, 171);
+}
+
+#status h3, #status h2 {
+  font-size: 15px;
+  color: white;
+}
+
+#status2 {
+  width: 15%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(102, 103, 171);
+  padding: 1%;
+  border-bottom-right-radius:10px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 5px solid rgba(102, 103, 171);
+  justify-content: center;
+  align-items: center;
+}
+
+#blobDiv {
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.blobs {
+  width:50%;
+  height:50%;
+}
+
+#navBar {
+  text-align: center;
+}
+
+#goToClass {
+  text-align: center;
+}
+
+#classTable {
+  width: 90% ;
+  border-collapse: collapse ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+}
+
+.classTD {
+  width: 20%;
+  text-align: center;
+  padding: 5px;
+}
+
+.classButt {
+  text-align: center;
+  width:100%;
+  padding: 20px;
+  margin: 3px;
+  border-radius: 10px;
+  border: none;
+  background: #66ccff;
+  color: white;
+}
+
+.classButt:hover {
+  background: #0099e6;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.courseHead {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+#calcCourse, #csCourse, #bioCourse, #psychCourse, #econCourse {
+  display: none; 
+}
+
+.submitCourseButt {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #66ccff;
+  color: white;
+}
+
+.classCourses {
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+
+.classQuestions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.classQuestions2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#relaxTable{
+  width: 90% ;
+  margin-left: auto;
+  margin-right: auto;  
+  border-collapse: collapse;
+}
+
+.relaxTD {
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+}
+
+.relaxButt {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #66ccff;
+  color: white;
+}
+
+.relaxButt:hover {
+  background: #0099e6;
+  transform: translateY(-2px) scale(1.01);
+}
+
+#getMovies {
+  margin: 6%;
+}
+
+#getFriends {
+  margin: 6%;
+  text-align: center;
+}
+
+#getMusic {
+  margin:6%;
+  text-align: center;
+}
+/* EAT FOOD GRID */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border: 0;
+}
+
+.grid-item {
+  border: 0;
+  text-align: center;
+}
+
+.foodButton {
+  border: 0;
+  background-repeat: no-repeat;
+  background-size: 25vw 20vw;
+  width:25vw;
+  height:20vw;
+  font-weight: bold;
+  font-size: 4vw;
+  color: white;
+}
+
+#memoryGameFruit, #memoryGamePizza, #memoryGameCookies {
+  text-align: center;
+}
+
+.memoryButton {
+  text-align: center;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #316CF4;
+  color: white;
+}
+
+.memoryButton:hover {
+  background: #0099e6;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.memoryButtonSubmit {
+  text-align: center;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #6667AB;
+  color: white;
+}
+
+.memoryButtonSubmit:hover {
+  background: #6667AB;
+  transform: translateY(-2px) scale(1.01);
+}
+
